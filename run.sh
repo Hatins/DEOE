@@ -1,0 +1,1 @@
+python train.py +experiment/gen4='base.yaml'
