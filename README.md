@@ -14,3 +14,5 @@ and novel object discovery task via a disentangled objectness head, enhancing th
 maintaining the strong ability to filter out the background. Extensive experiments confirm the superiority of our proposed DEOE in
 comparison with three strong baseline methods that integrate the state-of-the-art event-based object detector with advancements in
 frame-based CAOD.
+
+![Open class: bicycle](.gifs/bicycle.mp4)
