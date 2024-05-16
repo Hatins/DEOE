@@ -15,5 +15,7 @@ maintaining the strong ability to filter out the background. Extensive experimen
 comparison with three strong baseline methods that integrate the state-of-the-art event-based object detector with advancements in
 frame-based CAOD.
 
-## Gifs
+## Comparasion with the RVT (training with pedestrians and cars)
 ![Open class: bicycle](https://github.com/Hatins/DEOE/blob/main/gifs/bicycle.gif)
+
+![Open class: motorcycle and truck](https://github.com/Hatins/DEOE/blob/main/gifs/truck_motorcar.gif)
