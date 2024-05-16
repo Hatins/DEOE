@@ -16,4 +16,4 @@ comparison with three strong baseline methods that integrate the state-of-the-ar
 frame-based CAOD.
 
 ## Gifs
-![Open class: bicycle]([.gifs/bicycle.gif](https://github.com/Hatins/DEOE/blob/main/gifs/bicycle.gif))
+![Open class: bicycle](https://github.com/Hatins/DEOE/blob/main/gifs/bicycle.gif)
