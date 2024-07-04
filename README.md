@@ -32,5 +32,5 @@ Note that to keep the labels for all the classes following [here](https://github
 ## Checkpoints
 |  | DSEC-Detection | GEN4 |
 | --- | --- | --- |
-|Pre-trained checkpoints| [download](https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0B1vGjEw8oGxSUFdPjUDgtnw?e=CaeBbl) | [download] |
+|Pre-trained checkpoints| [download](https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0B1vGjEw8oGxSUFdPjUDgtnw?e=CaeBbl) | [download](https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0B1vGjEw8oGxSUFdPjUDgtnw?e=CaeBbl)|
 |AUC-Unknown|25.1|  |
