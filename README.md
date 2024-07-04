@@ -21,10 +21,10 @@ tensorboardX pykeops scikit-learn ipdb timm
 ```
 
 ## Required Data
-###DSEC
+### DSEC
 You could download the processed DSEC-Detection by click here.
 
-###GEN4
+### GEN4
 You could get the raw GEN4 in [RVT](https://github.com/uzh-rpg/RVT).
 And get the processed data by following the [Instruction](https://github.com/uzh-rpg/RVT/blob/master/scripts/genx/README.md) proposed by RVT.
 Note that to keep the labels for all the classes following [here](https://github.com/uzh-rpg/RVT/issues/4).
