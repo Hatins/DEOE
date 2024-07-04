@@ -18,7 +18,7 @@ pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1
 pip install pytorch_lightning==1.8.6 wandb pandas plotly opencv-python tabulate pycocotools
 bbox-visualizer StrEnum hydra-core einops torchdata tqdm numba h5py hdf5plugin lovely-tensors
 tensorboardX pykeops scikit-learn ipdb timm
-'''
+```
 
 ## Required Data
 ###DSEC
