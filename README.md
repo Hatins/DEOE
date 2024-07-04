@@ -21,6 +21,7 @@ tensorboardX pykeops scikit-learn ipdb timm
 ```
 
 ## Required Data
+We recommend using DSEC-Detection training and evaluation first (about 2 days), since 1 Mpx usually takes a long time to train (about 10 days) if you only have a single GPU.
 ### DSEC
 You can download the processed DSEC-Detection by clicking here.
 
