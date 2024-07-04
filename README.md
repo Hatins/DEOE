@@ -1,4 +1,4 @@
-![image](https://github.com/Hatins/DEOE/assets/46551316/55e18515-e6e5-4f2e-a27c-1f036380295d)# Detecting Every Object from Events
+# Detecting Every Object from Events
 ## Framework
 ![Framework](./git_figs/framework.png)
 
