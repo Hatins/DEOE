@@ -93,7 +93,7 @@ python demo.py dataset={DATASET} checkpoint={CHECKPOINT} +experiment/{DATASET}='
 ```
 Then the output images and video will be saved in  folder `DEOE\prediction`.
 
-## Cition
+## Citation
 If you find our work is helpful, please considering cite us.
 ```bibtex
 @article{zhang2024detecting,
