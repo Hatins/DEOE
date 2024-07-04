@@ -61,11 +61,11 @@ python validation.py dataset={DATASET} dataset.path={DATADIR} checkpoint={CHECKP
 The training batchsize, lr, and the other hyperparameters could be adjust in file `config\experiments\dataset\base.yaml`
 
 ### Evaluation for mixed categories or each category.
-Set the `testing_classes` as full categories in file `config\dataset\dataset.yaml`.
+Set the `testing_classes` to full categories in file `config\dataset\dataset.yaml`.
 
 Set the `unseen_classes` to the categories evaluated as the unknown categories in file `config\dataset\dataset.yaml`.
 
-The first results outputed by console is the results for unseen_classes, while the second is for testing_classes.
+The first results outputed by console is the results for unseen_classes, while the second is for testing_classes (generally full categories).
 
 
 
