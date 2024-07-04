@@ -1,0 +1,46 @@
+defaults:
+  - base
+
+name: dsec
+path: /data/zht/DSEC/DSEC_process
+ev_repr_name: 'stacked_histogram_dt=50_nbins=10'
+sequence_length: 5
+training_classes:
+  # 0: 'pedestrians'
+  # 2: 'cars'
+  #1: 'rider'
+  3: 'bus'
+  # 4: 'truck'
+  # 5: 'bicycle'
+  # 6: 'motorcycle'
+  # 7: 'train'
+testing_classes:
+  0: 'pedestrians'
+  1: 'rider'
+  2: 'cars'
+  3: 'bus'
+  4: 'truck'
+  5: 'bicycle'
+  6: 'motorcycle'
+  7: 'train'
+unseen_classes:
+  # 0: 'pedestrians'
+  # 2: 'cars'
+  1: 'rider'
+  3: 'bus'
+  4: 'truck'
+  5: 'bicycle'
+  6: 'motorcycle'
+  7: 'train'
+
+
+#training_classes: training_classes are the categories which are used for training, 
+#in the process of data loading, we only load the images containing those categories;
+
+#testing_classes: the categories used for testing, including the seen classes and unseen 
+#classes, you can treat them as all the categories.
+
+#unseen_classes: the categories that have not appeared in training classes
+resolution_hw: [480, 640]
+downsample_by_factor_2: False
+only_load_end_labels: False

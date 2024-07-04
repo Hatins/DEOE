@@ -1,1 +1,1 @@
-python validation.py dataset=gen4 +experiment/gen4='base.yaml'
+python validation.py dataset=dsec +experiment/dsec='base.yaml'

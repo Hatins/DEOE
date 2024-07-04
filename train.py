@@ -6,8 +6,7 @@ os.environ["OPENBLAS_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
 os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
 os.environ["NUMEXPR_NUM_THREADS"] = "1"
-os.environ["WANDB_API_KEY"] = 'e2088f7cc02b075f9420d7de0211c30d0ac86cb7'
-os.environ["WANDB_MODE"] = "offline"
+
 import torch
 
 torch.multiprocessing.set_sharing_strategy('file_system')
@@ -19,9 +18,11 @@ cudnn.allow_tf32 = True
 import hydra
 from omegaconf import DictConfig, OmegaConf
 import pytorch_lightning as pl
+
 from pytorch_lightning.callbacks import LearningRateMonitor, ModelSummary
 from pytorch_lightning.strategies import DDPStrategy
 from pytorch_lightning.loggers import WandbLogger
+
 from callbacks.custom import get_ckpt_callback, get_viz_callback
 from callbacks.gradflow import GradFlowLogCallback
 from config.modifier import dynamically_modify_train_config
@@ -76,9 +77,8 @@ def main(config: DictConfig):
     # ---------------------
     # Logging and Checkpoints
     # ---------------------
-    # logger = get_wandb_logger(config)
-    logger = WandbLogger(project=config.wandb.project_name,name='Bicor-5', group=config.wandb.group_name)
-    # logger = WandbLogger(project="RVT_CAOD",group="version1.0")
+    logger = get_wandb_logger(config)
+
     ckpt_path = None
     if config.wandb.artifact_name is not None:
         ckpt_path = get_ckpt_path(logger, wandb_config=config.wandb)
@@ -87,6 +87,11 @@ def main(config: DictConfig):
     # Model
     # ---------------------
     module = fetch_model_module(config=config)
+
+    ####
+    # module = module.load_from_checkpoint(str('checkpoints/DEOE_S.ckpt'), **{'full_config': config})
+    ####
+
     if ckpt_path is not None and config.wandb.resume_only_weights:
         print('Resuming only the weights instead of the full training state')
         module = module.load_from_checkpoint(str(ckpt_path), **{'full_config': config})

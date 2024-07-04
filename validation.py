@@ -67,18 +67,6 @@ def main(config: DictConfig):
     callbacks.append(viz_callback)
     callbacks.append(ModelSummary(max_depth=2))
 
-    if os.path.exists(config.img_save_path) and os.path.isdir(config.img_save_path):
-        for filename in os.listdir(config.img_save_path):
-            file_path = os.path.join(config.img_save_path, filename)
-            try:
-                if os.path.isfile(file_path):
-                    os.unlink(file_path)  
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path) 
-            except Exception as e:
-                print(f"error {file_path}: {e}")
-    else:
-        os.makedirs(config.img_save_path)
 
     # ---------------------
     # Validation

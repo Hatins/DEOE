@@ -1,0 +1,7 @@
+defaults:
+  - general
+  - dataset: dsec
+  - model: rnndet
+  - optional model/dataset: ${model}_${dataset}
+
+checkpoint: 'checkpoints/DEOE_S.ckpt'
