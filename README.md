@@ -48,3 +48,19 @@ Note that to keep the labels for all the classes following [here](https://github
   </tr>
 </table>
 
+## Evaluation
+Set `DATASET` = `dsec` or `gen4`.
+Set `DATADIR` = path to either the DSEC-Detection or 1 Mpx dataset directory.
+Set `CHECKPOINT` = path to the checkpoint using for evaluation. 
+```Bash
+python validation.py dataset={DATASET} dataset.path={DATADIR} checkpoint={CHECKPOINT} +experiment/dsec='base.yaml'
+```
+The training batchsize, lr, and the other hyperparameters could be adjust in file `config\experiments\dataset\base.yaml`
+
+### Evaluation for mixed categories or each category.
+Set the `testing_classes` as full categories in file `config\dataset\dataset.yaml`.
+Set the `unseen_classes` to the categories evaluated as the unknown categories in file `config\dataset\dataset.yaml`.
+The first results outputed by console is the results for unseen_classes, while the second is for testing_classes.
+
+
+
