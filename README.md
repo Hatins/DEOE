@@ -2,13 +2,13 @@
 ## Framework
 ![Framework](./git_figs/framework.png)
 
-## Comparasion with the RVT in close-set setting (training with pedestrians and cars)
+## Comparasion with the RVT in close-set (pedestrians and cars) setting
 ![Open class: bicycle](https://github.com/Hatins/DEOE/blob/main/gifs/bicycle.gif)
 
 ![Open class: motorcycle and truck](https://github.com/Hatins/DEOE/blob/main/gifs/truck_motorcar.gif)
 
 ## Installation
-We recommend using cuda11.8 to avoid unnecessary environment problem.
+We recommend using cuda11.8 to avoid unnecessary environmental problems.
 ```
 conda create -y -n deoe python=3.11
 conda activate deoe
@@ -22,10 +22,10 @@ tensorboardX pykeops scikit-learn ipdb timm
 
 ## Required Data
 ### DSEC
-You could download the processed DSEC-Detection by click here.
+You can download the processed DSEC-Detection by clicking here.
 
 ### GEN4
-You could get the raw GEN4 in [RVT](https://github.com/uzh-rpg/RVT).
+You can get the raw GEN4 in [RVT](https://github.com/uzh-rpg/RVT).
 And get the processed data by following the [Instruction](https://github.com/uzh-rpg/RVT/blob/master/scripts/genx/README.md) proposed by RVT.
 Note that to keep the labels for all the classes following [here](https://github.com/uzh-rpg/RVT/issues/4).
 
@@ -51,9 +51,9 @@ Note that to keep the labels for all the classes following [here](https://github
 ## Evaluation
 Set `DATASET` = `dsec` or `gen4`.
 
-Set `DATADIR` = path to either the DSEC-Detection or 1 Mpx dataset directory.
+Set `DATADIR` = path to the DSEC-Detection or 1 Mpx dataset directory.
 
-Set `CHECKPOINT` = path to the checkpoint using for evaluation.
+Set `CHECKPOINT` = path to the checkpoint used for evaluation.
 
 ```Bash
 python validation.py dataset={DATASET} dataset.path={DATADIR} checkpoint={CHECKPOINT} +experiment/{DATASET}='base.yaml'
@@ -65,7 +65,7 @@ Set the `testing_classes` to full categories in file `config\dataset\dataset.yam
 
 Set the `unseen_classes` to the categories evaluated as the unknown categories in file `config\dataset\dataset.yaml`.
 
-The first results outputed by console is the results for unseen_classes, while the second is for testing_classes (generally full categories).
+The first results outpute by the console are the results for unseen classes, while the second is for testing classes (generally full categories).
 
 ### Computed AUC for recall curve.
 ```Bash
@@ -74,7 +74,7 @@ python compute_auc.py
 ## Training
 Set `DATASET` = `dsec` or `gen4`.
 
-Set `DATADIR` = path to either the DSEC-Detection or 1 Mpx dataset directory.
+Set `DATADIR` = path to  the DSEC-Detection or 1 Mpx dataset directory.
 
 ```Bash
 python train.py dataset={DATASET} dataset.path={DATADIR} +experiment/{DATASET}='base.yaml'
@@ -84,9 +84,9 @@ The batchsize, lr, and the other hyperparameters could be adjusted in file `conf
 ## Visualization of results 
 Set `DATASET` = `dsec` or `gen4`.
 
-Set `CHECKPOINT` = path to the checkpoint using for evaluation.
+Set `CHECKPOINT` = path to the checkpoint used for evaluation.
 
-Set `h5_file` = path to files used to visualization like `h5_file = /DSEC_process/val/zurich_city_15_a`.
+Set `h5_file` = path to files used for visualization like `h5_file = /DSEC_process/val/zurich_city_15_a`.
 
 ```Bash
 python demo.py dataset={DATASET} checkpoint={CHECKPOINT} +experiment/{DATASET}='base.yaml'
@@ -94,7 +94,7 @@ python demo.py dataset={DATASET} checkpoint={CHECKPOINT} +experiment/{DATASET}='
 Then the output images and video will be saved in  folder `DEOE\prediction`.
 
 ## Cition
-If you find our work is helpful, please considering cite us as:
+If you find our work is helpful, please considering cite us.
 ```bibtex
 @article{zhang2024detecting,
   title={Detecting Every Object from Events},
