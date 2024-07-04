@@ -1,3 +1,0 @@
-name: "stacked_histogram"
-nbins: 10
-count_cutoff: 10

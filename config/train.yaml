@@ -1,5 +1,0 @@
-defaults:
-  - general
-  - dataset: gen4
-  - model: rnndet
-  - optional model/dataset: ${model}_${dataset}
