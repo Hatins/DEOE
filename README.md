@@ -30,7 +30,21 @@ And get the processed data by following the [Instruction](https://github.com/uzh
 Note that to keep the labels for all the classes following [here](https://github.com/uzh-rpg/RVT/issues/4).
 
 ## Checkpoints
-|  | DSEC-Detection | GEN4 |
-| --- | --- | --- |
-|Pre-trained checkpoints| [download](https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0B1vGjEw8oGxSUFdPjUDgtnw?e=CaeBbl) | [download](https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0B1vGjEw8oGxSUFdPjUDgtnw?e=CaeBbl)|
-|AUC-Unknown|25.1|  |
+<table>
+  <tr>
+    <th style="text-align:center"></th>
+    <th style="text-align:center">DSEC-Detection</th>
+    <th style="text-align:center">GEN4</th>
+  </tr>
+  <tr>
+    <td style="text-align:center">Pre-trained checkpoints</td>
+    <td style="text-align:center"><a href="https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0B1vGjEw8oGxSUFdPjUDgtnw?e=CaeBbl">download</a></td>
+    <td style="text-align:center"><a href="https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0B1vGjEw8oGxSUFdPjUDgtnw?e=CaeBbl">download</a></td>
+  </tr>
+  <tr>
+    <td style="text-align:center">AUC-Unknown</td>
+    <td style="text-align:center">25.1</td>
+    <td style="text-align:center">23.3</td>
+  </tr>
+</table>
+
