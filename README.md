@@ -30,6 +30,7 @@ And get the processed data by following the [Instruction](https://github.com/uzh
 Note that to keep the labels for all the classes following [here](https://github.com/uzh-rpg/RVT/issues/4).
 
 ## Checkpoints
-|| DSEC-Detection | GEN4 |
+|  | DSEC-Detection | GEN4 |
+| --- | --- | --- |
 |Pre-trained checkpoints| [download](https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0B1vGjEw8oGxSUFdPjUDgtnw?e=CaeBbl) | [download] |
 |AUC-Unknown|25.1|  |
