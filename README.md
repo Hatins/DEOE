@@ -3,9 +3,7 @@
 ![Framework](./git_figs/framework.png)
 
 ## Comparasion with the RVT in close-set (pedestrians and cars) setting
-![Open class: bicycle](https://github.com/Hatins/DEOE/blob/main/gifs/bicycle.gif)
-
-![Open class: motorcycle and truck](https://github.com/Hatins/DEOE/blob/main/gifs/truck_motorcar.gif)
+![Open class: bicycle](https://github.com/Hatins/DEOE/blob/main/480_DEOE.gif)
 
 ## Installation
 We recommend using cuda11.8 to avoid unnecessary environmental problems.
