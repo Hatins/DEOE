@@ -45,7 +45,7 @@ Note that to keep the labels for all the classes following [here](https://github
   <tr>
     <td style="text-align:center;">AUC-Unknown</td>
     <td style="text-align:center;">25.1</td>
-    <td style="text-align:center;">23.3</td>
+    <td style="text-align:center;">22.4</td>
   </tr>
 </table>
 
