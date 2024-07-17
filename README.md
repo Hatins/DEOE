@@ -3,7 +3,7 @@
 ![Framework](./git_figs/framework.png)
 
 ## Comparasion with the RVT in close-set (pedestrians and cars) setting
-### Waiting for video loading ...
+### Waiting for video loading, or [download](https://github.com/Hatins/DEOE/raw/main/gifs/DEOD.mp4) the mp4 file directly ...
 ![Open class: bicycle](https://github.com/Hatins/DEOE/blob/main/gifs/videos.gif)
 
 ## Installation
