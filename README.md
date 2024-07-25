@@ -39,13 +39,13 @@ Note that to keep the labels for all the classes following [here](https://github
   </tr>
   <tr>
     <td style="text-align:center;">Pre-trained checkpoints</td>
-    <td style="text-align:center;"><a href="https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0B1vGjEw8oGxSUFdPjUDgtnw?e=CaeBbl">download</a></td>
-    <td style="text-align:center;"><a href="https://1drv.ms/u/c/93289205239bc375/EWwNVZ7NCYtBosHwD_ABq0oBoQq2NzFcs-e7NcLBNFY5CA?e=hOoFUX">download</a></td>
+    <td style="text-align:center;"><a href="https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0Bphskqnh1zua2rogpYNkANw?e=crXrjv">download</a></td>
+    <td style="text-align:center;"><a href="https://1drv.ms/u/c/93289205239bc375/ETetOpGDDyJDsN_5lTkvdwEBqEvm9kw2aqdXDNCiHn4FAg?e=c1yTGf">download</a></td>
   </tr>
   <tr>
     <td style="text-align:center;">AUC-Unknown</td>
     <td style="text-align:center;">25.1</td>
-    <td style="text-align:center;">22.4</td>
+    <td style="text-align:center;">23.5</td>
   </tr>
 </table>
 
