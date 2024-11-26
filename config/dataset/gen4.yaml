@@ -2,7 +2,7 @@ defaults:
   - base
 
 name: gen4
-path: /data/zht/GEN4/GEN4_process
+path: ???
 ev_repr_name: 'stacked_histogram_dt=50_nbins=10'
 sequence_length: 5
 training_classes:
