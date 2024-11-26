@@ -65,7 +65,7 @@ model:
         mode: reduce-overhead
     depthwise: False
     act: "silu"
-    average_img_num: 15
+    average_img_num: 10
     IoU_loss_weight: 3
 
 
