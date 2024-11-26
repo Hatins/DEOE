@@ -1,108 +1,30 @@
-# Detecting Every Object from Events
-## Framework
-![Framework](./git_figs/framework.png)
+# Key Settings That Affect the Results
+Note that there are two settings for the DSEC dataset, and the results presented in the paper are based on these settings.
+We are not claiming that these two settings must be fixed, and they may seem somewhat arbitrary. However, if you intend to
+use our method for comparison, you are free to adjust these settings. Just be sure to compare DEOE under the same settings
+to maintain fairness.
 
-## Comparasion with the RVT in close-set (pedestrians and cars) setting
-### Waiting for video loading ...
-![Open class: bicycle](https://github.com/Hatins/DEOE/blob/main/gifs/videos.gif)
+##Data Frequency of DSEC-Detection 
+The data frequency is set to 40 Hz in our experiments, considering the characteristics of the event stream, i.e., its high
+temporal resolution. The annotation frequency is 20 Hz, as described in in [DSEC-Detection](https://dsec.ifi.uzh.ch/dsec-detection/). Results under 40 Hz data frequency 
+is better than results under 20 Hz data frequency, since the memory networks suffer less burden. You can choose do experiments with a
+20 Hz data, that's Ok but you should test DEOE on the same dataset.
 
-## Installation
-We recommend using cuda11.8 to avoid unnecessary environmental problems.
+## Small Box Filter
+This strategy of filtering small boxes is commonly used in GEN1 and GEN4 datasets, so we apply it to the DSEC-Detection dataset as well,
+since its annotations are pseudo-labels. Our settings are as follows:
+```python
+    if apply_bbox_filters:
+        min_box_diag = 40
+        min_box_side = 30
+        if downsampled_by_2:
+            assert min_box_diag % 2 == 0
+            min_box_diag //= 2
+            assert min_box_side % 2 == 0
+            min_box_side //= 2
 ```
-conda create -y -n deoe python=3.11
-conda activate deoe
+This setting has a significant impact on the final results. You may also experiment with other values for `min_box_diag` and `min_box_side`. However,
+to ensure fairness, be sure to test DEOE using the same settings.
 
-pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1
-
-pip install lightning wandb pandas plotly opencv-python tabulate pycocotools bbox-visualizer StrEnum hydra-core
-einops torchdata tqdm numba h5py hdf5plugin lovely-tensors tensorboardX pykeops scikit-learn ipdb timm
-
-pip install pytorch_lightning==1.8.6
-```
-
-## Required Data
-We recommend using DSEC-Detection training and evaluation first (about 2 days), since 1 Mpx usually takes a long time to train (about 10 days) if you only have a single GPU.
-### DSEC
-You can download the processed DSEC-Detection by clicking [here](https://1drv.ms/u/c/93289205239bc375/EYUca8vIrSJKsFCOsIRDZ-8BRC69VeuoT0z1kWJQZ1GLSA?e=USUMJG).
-
-### GEN4
-You can get the raw GEN4 in [RVT](https://github.com/uzh-rpg/RVT).
-And get the processed data by following the [Instruction](https://github.com/uzh-rpg/RVT/blob/master/scripts/genx/README.md) proposed by RVT.
-Note that to keep the labels for all the classes following [here](https://github.com/uzh-rpg/RVT/issues/4).
-
-## Checkpoints
-<table>
-  <tr>
-    <th style="text-align:center;"> </th>
-    <th style="text-align:center;">DSEC-Detection</th>
-    <th style="text-align:center;">GEN4</th>
-  </tr>
-  <tr>
-    <td style="text-align:center;">Pre-trained checkpoints</td>
-    <td style="text-align:center;"><a href="https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0B1vGjEw8oGxSUFdPjUDgtnw?e=CaeBbl">download</a></td>
-    <td style="text-align:center;"><a href="https://1drv.ms/u/c/93289205239bc375/EWwNVZ7NCYtBosHwD_ABq0oBoQq2NzFcs-e7NcLBNFY5CA?e=hOoFUX">download</a></td>
-  </tr>
-  <tr>
-    <td style="text-align:center;">AUC-Unknown</td>
-    <td style="text-align:center;">25.1</td>
-    <td style="text-align:center;">22.4</td>
-  </tr>
-</table>
-
-## Evaluation
-Set `DATASET` = `dsec` or `gen4`.
-
-Set `DATADIR` = path to the DSEC-Detection or 1 Mpx dataset directory.
-
-Set `CHECKPOINT` = path to the checkpoint used for evaluation.
-
-```Bash
-python validation.py dataset={DATASET} dataset.path={DATADIR} checkpoint={CHECKPOINT} +experiment/{DATASET}='base.yaml'
-```
-The batchsize, lr, and the other hyperparameters could be adjusted in file `config\experiments\dataset\base.yaml`.
-
-### Evaluation for mixed categories or each category.
-Set the `testing_classes` to full categories in file `config\dataset\dataset.yaml`.
-
-Set the `unseen_classes` to the categories evaluated as the unknown categories in file `config\dataset\dataset.yaml`.
-
-The first results outpute by the console are the results for unseen classes, while the second is for testing classes (generally full categories).
-
-### Computed AUC for recall curve.
-```Bash
-python compute_auc.py
-```
-## Training
-Set `DATASET` = `dsec` or `gen4`.
-
-Set `DATADIR` = path to  the DSEC-Detection or 1 Mpx dataset directory.
-
-```Bash
-python train.py dataset={DATASET} dataset.path={DATADIR} +experiment/{DATASET}='base.yaml'
-```
-The batchsize, lr, and the other hyperparameters could be adjusted in file `config\experiments\dataset\base.yaml`.
-
-## Visualization of results 
-Set `DATASET` = `dsec` or `gen4`.
-
-Set `CHECKPOINT` = path to the checkpoint used for evaluation.
-
-Set `h5_file` = path to files used for visualization like `h5_file = /DSEC_process/val/zurich_city_15_a`.
-
-```Bash
-python demo.py dataset={DATASET} checkpoint={CHECKPOINT} +experiment/{DATASET}='base.yaml'
-```
-Then the output images and video will be saved in  folder `DEOE\prediction`.
-
-## Citation
-If you find our work is helpful, please considering cite us.
-```bibtex
-@article{zhang2024detecting,
-  title={Detecting Every Object from Events},
-  author={Zhang, Haitian and Xu, Chang and Wang, Xinya and Liu, Bingde and Hua, Guang and Yu, Lei and Yang, Wen},
-  journal={arXiv preprint arXiv:2404.05285},
-  year={2024}
-}
-```
 
 
