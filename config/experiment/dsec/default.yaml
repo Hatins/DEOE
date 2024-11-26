@@ -4,8 +4,8 @@ defaults:
 
 training:
   precision: 32
-  max_epochs: 1
-  max_steps: 4999
+  max_epochs: 10000
+  max_steps: 300000
   learning_rate: 0.00015 #lr = 2e-4 * sqrt(effective_batch_size/8).
   lr_scheduler:
     use: True
