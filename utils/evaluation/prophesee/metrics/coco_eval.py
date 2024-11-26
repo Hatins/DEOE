@@ -177,7 +177,6 @@ def  _coco_eval(gts, detections, height, width, labelmap=("car", "pedestrian"), 
     coco_eval = COCOEvalXclassWrapper(coco_gt, coco_pred, 'bbox')
 
     coco_eval.params.maxDets=[10,20,30,50,100,300]
-    coco_eval.params.catIds = [1,2,3,4,5]
     coco_eval.params.imgIds = np.arange(1, len(gts) + 1, dtype=int)
     coco_eval.params.useCats = 0 #TODO: if using the cats information for evaluation
     coco_eval.evaluate()
