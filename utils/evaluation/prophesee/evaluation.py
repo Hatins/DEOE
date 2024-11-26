@@ -15,9 +15,9 @@ def evaluate_list(result_boxes_list,
     if camera == 'gen1':
         classes = ["object"]
     elif camera == 'gen4':
-        classes = ["object"]
+        classes = [ 'pedestrians','two wheelers', 'cars', 'trucks', 'buses'] 
     elif camera == 'dsec':
-        classes = ["object"]
+        classes = ['pedestrians', 'cars', 'rider', 'bus', 'truck', 'bicycle', 'motorcycle', 'train']
     else:
         raise NotImplementedError
 
