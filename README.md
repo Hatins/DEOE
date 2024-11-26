@@ -1,6 +1,6 @@
 # Detecting Every Object from Events
 ## Framework
-![Framework](./git_figs/framework.png)
+![Framework](./readme/git_figs/framework.png)
 
 ## Comparasion with the RVT in close-set (pedestrians and cars) setting
 ### Waiting for video loading, or [download](https://github.com/Hatins/DEOE/raw/main/readme/gifs/DEOD.mp4) the mp4 file directly ...
