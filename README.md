@@ -51,6 +51,7 @@ Note that to keep the labels for all the classes following [here](https://github
 
 ## Evaluation
 Before the evaluation, please read some of [important settings](https://github.com/Hatins/DEOE/blob/main/readme/test_setting.md) in our experiments.
+
 Set `DATASET` = `dsec` or `gen4`.
 
 Set `DATADIR` = path to the DSEC-Detection or 1 Mpx dataset directory.
