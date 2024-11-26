@@ -58,6 +58,6 @@ wandb:
   artifact_name: null # Name of checkpoint/artifact. Required for resuming. E.g. USERNAME/PROJECTNAME/checkpoint-1grv5kg6-last:v15
   artifact_local_file: null # If specified, will use the provided local filepath instead of downloading it. Required if resuming with DDP.
   resume_only_weights: False
-  name: DEOE_S_2M
-  group_name: rvt # Specify group name of the run
-  project_name: RVT
+  name: null
+  group_name: null # Specify group name of the run
+  project_name: DEOE
