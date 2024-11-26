@@ -3,7 +3,6 @@ from typing import Tuple
 from omegaconf import OmegaConf, DictConfig
 
 from .yolo_pafpn import YOLOPAFPN
-from ...yolox.models.yolo_head import YOLOXHead
 from .faster_rcnnfpn import FPN
 
 from ...yolox.models.deoe_head import DEOEHead
