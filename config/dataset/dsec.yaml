@@ -2,14 +2,14 @@ defaults:
   - base
 
 name: dsec
-path: /data/zht/DSEC/DSEC_process
+path: ???
 ev_repr_name: 'stacked_histogram_dt=50_nbins=10'
 sequence_length: 5
 training_classes:
-  # 0: 'pedestrians'
-  # 2: 'cars'
-  #1: 'rider'
-  3: 'bus'
+  0: 'pedestrians'
+  2: 'cars'
+  # 1: 'rider'
+  # 3: 'bus'
   # 4: 'truck'
   # 5: 'bicycle'
   # 6: 'motorcycle'
