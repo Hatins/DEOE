@@ -13,9 +13,13 @@ conda create -y -n deoe python=3.11
 
 conda activate deoe
 
-pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 torchdata==0.7.0 --index-url https://download.pytorch.org/whl/cu118
+pip install torch==2.1.1 torchvision==0.16.1 torchdata==0.7.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
 
 pip install wandb pandas plotly opencv-python tabulate pycocotools bbox-visualizer StrEnum hydra-core einops torchdata tqdm numba h5py hdf5plugin lovely-tensors tensorboardX pykeops scikit-learn ipdb timm opencv-python-headless pytorch_lightning==1.8.6 numpy==1.26.3
+
+pip install openmim
+
+mim install mmcv
 ```
 
 ## Required Data
