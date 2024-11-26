@@ -3,7 +3,7 @@ from omegaconf import DictConfig
 
 from modules.data.genx import DataModule as genx_data_module
 from modules.detection import Module as rnn_det_module
-from modules.detection_without_rnn import Module as det_module
+
 import ipdb
 
 
@@ -13,8 +13,7 @@ def fetch_model_module(config: DictConfig) -> pl.LightningModule:
     if model_str == 'rnndet':
         if using_rnn == True:
             return rnn_det_module(config)
-        else:
-            return det_module(config)
+
     raise NotImplementedError
 
 
