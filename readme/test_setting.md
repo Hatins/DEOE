@@ -8,7 +8,7 @@ to maintain fairness.
 The data frequency is set to 40 Hz in our experiments, considering the characteristics of the event stream, i.e., its high
 temporal resolution. The annotation frequency is 20 Hz, as described in in [DSEC-Detection](https://dsec.ifi.uzh.ch/dsec-detection/). Results under 20 Hz data frequency 
 is better than results under 40 Hz data frequency, since the memory networks suffer less burden. You can choose do experiments with a
-20 Hz data, that's Ok but you should test DEOE on the same dataset.
+20 Hz data, that's ok but you should test DEOE on the same dataset.
 
 ## Small Box Filter
 This strategy of filtering small boxes is commonly used in GEN1 and GEN4 datasets, so we apply it to the DSEC-Detection dataset as well,
