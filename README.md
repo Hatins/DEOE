@@ -3,8 +3,8 @@
 ![Framework](./git_figs/framework.png)
 
 ## Comparasion with the RVT in close-set (pedestrians and cars) setting
-### Waiting for video loading, or [download](https://github.com/Hatins/DEOE/raw/main/gifs/DEOD.mp4) the mp4 file directly ...
-![Open class: bicycle](https://github.com/Hatins/DEOE/blob/main/gifs/videos.gif)
+### Waiting for video loading, or [download](https://github.com/Hatins/DEOE/raw/main/readme/gifs/DEOD.mp4) the mp4 file directly ...
+![Open class: bicycle](https://github.com/Hatins/DEOE/blob/main/readme/gifs/videos.gif)
 
 ## Installation
 We recommend using cuda11.8 to avoid unnecessary environmental problems.
