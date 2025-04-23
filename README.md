@@ -25,7 +25,7 @@ mim install mmcv
 ## Required Data
 We recommend using DSEC-Detection training and evaluation first (about 2 days), since 1 Mpx usually takes a long time to train (about 10 days) if you only have a single GPU.
 ### DSEC
-You can download the processed DSEC-Detection by clicking [here](https://1drv.ms/u/c/93289205239bc375/EYUca8vIrSJKsFCOsIRDZ-8BRC69VeuoT0z1kWJQZ1GLSA?e=USUMJG).
+You can download the processed DSEC-Detection by clicking [here](https://drive.google.com/file/d/15k-4tc4m2uhWCUXC5impkkcGlu9Q2t5T/view?usp=drive_link).
 
 ### GEN4
 You can get the raw GEN4 in [RVT](https://github.com/uzh-rpg/RVT).
@@ -41,8 +41,8 @@ Note that to keep the labels for all the classes following [here](https://github
   </tr>
   <tr>
     <td style="text-align:center;">Pre-trained checkpoints</td>
-    <td style="text-align:center;"><a href="https://1drv.ms/u/c/93289205239bc375/EQue4dcG4M9Ggbu5dM-iOc0Bphskqnh1zua2rogpYNkANw?e=crXrjv">download</a></td>
-    <td style="text-align:center;"><a href="https://1drv.ms/u/c/93289205239bc375/ETetOpGDDyJDsN_5lTkvdwEBqEvm9kw2aqdXDNCiHn4FAg?e=c1yTGf">download</a></td>
+    <td style="text-align:center;"><a href="https://drive.google.com/file/d/1RdiL1HQQA-Nnt2AmhsuNkDZJIUUHp9kx/view?usp=drive_link">download</a></td>
+    <td style="text-align:center;"><a href="https://drive.google.com/file/d/1yjC0cVK23t_wcbyEVepjeYHS1sZXWlny/view?usp=drive_link">download</a></td>
   </tr>
   <tr>
     <td style="text-align:center;">AUC-Unknown</td>
