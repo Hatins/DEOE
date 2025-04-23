@@ -1,4 +1,4 @@
-# Detecting Every Object from Events
+# Detecting Every Object from Events [2025, TPAMI]
 ## Framework
 ![Framework](./readme/git_figs/framework.png)
 
