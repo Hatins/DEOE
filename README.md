@@ -101,12 +101,15 @@ Then the output images and video will be saved in  folder `DEOE\prediction`.
 ## Citation
 If you find our work is helpful, please considering cite us.
 ```bibtex
-@article{zhang2024detecting,
-  title={Detecting Every Object from Events},
+@ARTICLE{10979499,
   author={Zhang, Haitian and Xu, Chang and Wang, Xinya and Liu, Bingde and Hua, Guang and Yu, Lei and Yang, Wen},
-  journal={arXiv preprint arXiv:2404.05285},
-  year={2024}
-}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={Detecting Every Object From Events}, 
+  year={2025},
+  volume={47},
+  number={8},
+  pages={7171-7178},
+  doi={10.1109/TPAMI.2025.3565102}}
 ```
 
 
